@@ -1,0 +1,31 @@
+.main{
+    padding-top: 75px;
+    height: 650px;
+    margin: auto;
+    background-image: linear-gradient(#69E5CD,#59B2DA,#4F94E1);
+
+}
+.plus{
+    height: 30px;
+    width: 30px;
+    background-color:purple;
+    color: white;
+}
+.box{
+    background-color: white;
+    height: 400px;
+    width: 30%;
+margin: auto;
+}
+input{
+    height: 40px;
+    width: 300px;
+}
+span{
+    background-color: ghostwhite;
+    padding:10px;
+    margin: 3px;
+}
+.child{
+    
+}

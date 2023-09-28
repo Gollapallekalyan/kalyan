@@ -1,0 +1,64 @@
+<nav>
+    <a routerLink="home" routerLinkActive="active">HOME</a>
+    <a routerLink="about" routerLinkActive="active">ABOUT</a>
+    <a routerLink="gallary" routerLinkActive="active">GALLARY</a>
+    <a routerLink="contact" routerLinkActive="active">CONTACT</a>
+     <a routerLink="users" routerLinkActive="active">USERS</a>
+    <a routerLink="products" routerLinkActive="active">PRODUCTS</a>
+    <a routerLink="todos" routerLinkActive="active">TODOS</a>
+    <a routerLink="login" routerLinkActive="active">LOGIN</a>
+   
+    <span class="cart-count">{{prod.length}}</span>
+
+    <img class="cart-icon"  src="https://www.nicepng.com/png/detail/231-2317299_png-file-shopping-cart-icon-vector-png.png" alt="" data-bs-toggle="modal"
+    data-bs-target="#myModal">
+</nav>
+
+
+
+<router-outlet></router-outlet>
+<footer class="footer">
+<p>copyrights reserved @2023</p>
+</footer>
+
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="mainProduct">
+  
+              <div class="productDetails" *ngFor="let prod of prod">
+                  <img width="100" height="100" src="{{prod.image}}" alt="">
+                  <div class="child">
+                  <p class="title" title="{{prod.title}}">{{prod.title}}</p>
+                  <p><b>$ {{prod.price}}</b></p>
+                  <p>Rating <button class="btn btn-primary">{{prod.rating.rate}}</button> Rated<b> {{prod.rating.count}}</b></p>
+                  <p class="description" title="{{prod.description}}"><b>Description:</b>{{prod.description}}</p>
+                  <button class="btn btn-danger" (click)="delete(prod)">Delete</button>
+                  
+                  </div>
+              </div>
+          
+          </div>
+          </div>
+       
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Total{{total}}</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+  
+    </div>
+  </div>
+  
+  

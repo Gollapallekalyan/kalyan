@@ -1,0 +1,50 @@
+.studentmain {
+    display: flex;
+    width: 100%;
+}
+
+.studentForm {
+    width: 30%;
+    height: 600px;
+    background-color: mediumaquamarine;
+
+}
+
+.studentList {
+    width: 70%;
+    height: 600px;
+    background-color: grey;
+}
+
+.kalyan {
+    text-align: center;
+}
+
+label {
+    width: 80px;
+    margin: 10px;
+}
+
+th {
+    background-color: red;
+    height: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(16, 167, 16);
+}
+
+.formdetails {
+    text-align: center;
+    color: white;
+}
+
+.userdetails {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+tr {
+    border: 1px solid white;
+}
